@@ -12,7 +12,7 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/report")
+@app.route("/search")
 def report():
     word = request.args.get("word")
     if word:  # 검색 결과를 통일시켜주자
@@ -21,16 +21,24 @@ def report():
         if existingVids:
             videos = existingVids
         else:
-            videos = search_youtube(word)
+            ids, videos = search_youtube(word)
             db[word] = videos
     else:  # None을 반환하지 않도록 해주자
         return redirect("/")
     return render_template(
-        "report.html",
+        "search.html",
         searchingBy=word,
         results_number=len(videos),
         videos=videos,
+        ids=ids,
     )
+
+
+@app.route("/temp")
+def temp():
+    file = open("searchResponse.txt", "r")
+    data = file.readlines()
+    return render_template("temp.html", data=data)
 
 
 @app.route("/export")

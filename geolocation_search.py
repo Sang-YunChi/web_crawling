@@ -32,19 +32,19 @@ def extract_youtube(options):
         .execute()
     )
 
-    search_videos = []
-
     # Merge video ids
+
+    search_videos = []
     for search_result in search_response.get("items", []):
         search_videos.append(search_result["id"]["videoId"])
+
     video_ids = ",".join(search_videos)
 
     # Call the videos.list method to retrieve location details for each video.
     video_response = youtube.videos().list(id=video_ids, part="snippet, recordingDetails").execute()
 
-    videos = []
-
     # Add each result to the list, and then display the list of matching videos.
+    videos = []
     for video_result in video_response.get("items", []):
         tmp = {
             "title": video_result["snippet"]["title"],
@@ -52,7 +52,7 @@ def extract_youtube(options):
             "longitude": video_result["recordingDetails"]["location"]["longitude"],
         }
         videos.append(tmp)
-    return videos
+    return search_videos, videos
     # print("\n".join(videos))
     # print ("Videos:\n", "\n".join(videos), "\n")
 
@@ -61,7 +61,7 @@ def search_youtube(word):
     argparser.add_argument("--q", help="Search term", default=word)
     argparser.add_argument("--location", help="Location", default="37.42307,-122.08427")
     argparser.add_argument("--location-radius", help="Location radius", default="5km")
-    argparser.add_argument("--max-results", help="Max results", default=25)
+    argparser.add_argument("--max-results", help="Max results", default=100)
     args = argparser.parse_args()
 
     try:

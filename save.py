@@ -2,9 +2,9 @@ import csv
 
 
 def save_to_file(videos):
-    file = open("jobs.csv", mode="w")
+    file = open(f"{videos}.csv", mode="w")
     writer = csv.writer(file)
-    writer.writerow(["title", "company", "location", "link"])
-    for j in jobs:
-        writer.writerow(list(j.values()))
-    return file
+    writer.writerow(["title", "latitude", "longitude"])
+    for v in videos:
+        writer.writerow(list(v.values()))
+    return

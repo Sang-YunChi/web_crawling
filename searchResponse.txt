@@ -1,0 +1,32 @@
+searchResponse:
+{
+    "items":
+    [
+        {"id":{"kind":"youtube#video","videoId":"KR0g-1hnQPA"},"snippet":{"thumbnails":{"default":{"url":"https://i.ytimg.com/vi/KR0g-1hnQPA/default.jpg"}},"title":"Apple Event — October 13"}},
+        {"id":{"kind":"youtube#video","videoId":"b13xnFp_LJs"},"snippet":{"thumbnails":{"default":{"url":"https://i.ytimg.com/vi/b13xnFp_LJs/default.jpg"}},"title":"Apple Event — September 15"}},
+        {"id":{"kind":"youtube#video","videoId":"XQSse3b2ge4"},"snippet":{"thumbnails":{"default":{"url":"https://i.ytimg.com/vi/XQSse3b2ge4/default.jpg"}},"title":"GFRIEND (여자친구) &#39;Apple&#39; Official M/V"}},
+        {"id":{"kind":"youtube#video","videoId":"cnXapYkboRQ"},"snippet":{"thumbnails":{"default":{"url":"https://i.ytimg.com/vi/cnXapYkboRQ/default.jpg"}},"title":"This is iPhone 12 Pro — Apple"}},
+        {"id":{"kind":"youtube#video","videoId":"yKQmsgHmYQk"},"snippet":{"thumbnails":{"default":{"url":"https://i.ytimg.com/vi/yKQmsgHmYQk/default.jpg"}},"title":"Apple 2021 Preview — M1X MacBook Pro, iMac, iPhone 13, AirTags, &amp; More!"}},
+        {"id":{"kind":"youtube#video","videoId":"5AwdkGKmZ0I"},"snippet":{"thumbnails":{"default":{"url":"https://i.ytimg.com/vi/5AwdkGKmZ0I/default.jpg"}},"title":"Apple Event — November 10"}},
+        {"id":{"kind":"youtube#video","videoId":"XRb_VAp_6B0"},"snippet":{"thumbnails":{"default":{"url":"https://i.ytimg.com/vi/XRb_VAp_6B0/default.jpg"}},"title":"Watch Apple&#39;s entire Mac November event in 10 minutes (supercut)"}},
+        {"id":{"kind":"youtube#video","videoId":"FXI_-OesT3A"},"snippet":{"thumbnails":{"default":{"url":"https://i.ytimg.com/vi/FXI_-OesT3A/default.jpg"}},"title":"Introducing AirPods Max — Apple"}},
+        {"id":{"kind":"youtube#video","videoId":"UIXhbI3P8dU"},"snippet":{"thumbnails":{"default":{"url":"https://i.ytimg.com/vi/UIXhbI3P8dU/default.jpg"}},"title":"Apple&#39;s 2021 Surprise! REAL AirTags Video!"}},
+        {"id":{"kind":"youtube#video","videoId":"G6A3DT_wwxM"},"snippet":{"thumbnails":{"default":{"url":"https://i.ytimg.com/vi/G6A3DT_wwxM/default.jpg"}},"title":"GFRIEND (여자친구) &#39;Apple&#39; lyrics (Color Coded Lyrics Eng/Rom/Han/가사)"}},
+        {"id":{"kind":"youtube#video","videoId":"65JrtwtTOdc"},"snippet":{"thumbnails":{"default":{"url":"https://i.ytimg.com/vi/65JrtwtTOdc/default.jpg"}},"title":"Meet iPhone 12 — Apple"}},
+        {"id":{"kind":"youtube#video","videoId":"vcVVxzyTNlw"},"snippet":{"thumbnails":{"default":{"url":"https://i.ytimg.com/vi/vcVVxzyTNlw/default.jpg"}},"title":"DON&#39;T Buy an Apple Charge Brick Without Watching This..."}},
+        {"id":{"kind":"youtube#video","videoId":"14GvOaElyZE"},"snippet":{"thumbnails":{"default":{"url":"https://i.ytimg.com/vi/14GvOaElyZE/default.jpg"}},"title":"The TWO New Folding Apple iPhones..."}},
+        {"id":{"kind":"youtube#video","videoId":"A8htCv735OE"},"snippet":{"thumbnails":{"default":{"url":"https://i.ytimg.com/vi/A8htCv735OE/default.jpg"}},"title":"Razer Book 13 vs Apple&#39;s M1 MacBook Pro"}},
+        {"id":{"kind":"youtube#video","videoId":"hq3yfQnllfQ"},"snippet":{"thumbnails":{"default":{"url":"https://i.ytimg.com/vi/hq3yfQnllfQ/default.jpg"}},"title":"Phonics Song with TWO Words - A For Apple - ABC Alphabet Songs with Sounds for Children"}},
+        {"id":{"kind":"youtube#video","videoId":"85XpHmcFE1w"},"snippet":{"thumbnails":{"default":{"url":"https://i.ytimg.com/vi/85XpHmcFE1w/default.jpg"}},"title":"MAGTANIM NG BAWANG NGAYONG 2021 AT SANGKATUTAK NA PERA ANG DARATING-APPLE PAGUIO7"}},
+        {"id":{"kind":"youtube#video","videoId":"mUNvvXvcQTs"},"snippet":{"thumbnails":{"default":{"url":"https://i.ytimg.com/vi/mUNvvXvcQTs/default.jpg"}},"title":"AirPods Max = Pure Apple Luxury"}},
+        {"id":{"kind":"youtube#video","videoId":"r_VSll0WLZE"},"snippet":{"thumbnails":{"default":{"url":"https://i.ytimg.com/vi/r_VSll0WLZE/default.jpg"}},"title":"Introducing iPad Air — Apple"}},
+        {"id":{"kind":"youtube#video","videoId":"xpHme7EhmrI"},"snippet":{"thumbnails":{"default":{"url":"https://i.ytimg.com/vi/xpHme7EhmrI/default.jpg"}},"title":"[CHOREOGRAPHY] GFRIEND (여자친구) ‘Apple’ Dance Practice"}},
+        {"id":{"kind":"youtube#video","videoId":"GEZhD3J89ZE"},"snippet":{"thumbnails":{"default":{"url":"https://i.ytimg.com/vi/GEZhD3J89ZE/default.jpg"}},"title":"WWDC 2020 Special Event Keynote —  Apple"}},
+        {"id":{"kind":"youtube#video","videoId":"xK7ZHL_L2EA"},"snippet":{"thumbnails":{"default":{"url":"https://i.ytimg.com/vi/xK7ZHL_L2EA/default.jpg"}},"title":"ABC Phonics Song for Children | A for Apple B for Ball | Nursery Rhymes for Kids"}},
+        {"id":{"kind":"youtube#video","videoId":"F5RNFiT1GNY"},"snippet":{"thumbnails":{"default":{"url":"https://i.ytimg.com/vi/F5RNFiT1GNY/default.jpg"}},"title":"Apple Song (SINGLE) | Learn Fruits for Kids | Educational Learning Songs &amp; Nursery Rhymes | ChuChuTV"}},
+        {"id":{"kind":"youtube#video","videoId":"EIOxJ46fxfw"},"snippet":{"thumbnails":{"default":{"url":"https://i.ytimg.com/vi/EIOxJ46fxfw/default.jpg"}},"title":"Drawing fruits : apple, peach, banana, pear and coloring for kids toddlers | Sunny Colours ☆"}},
+        {"id":{"kind":"youtube#video","videoId":"VVi7B1VYfrg"},"snippet":{"thumbnails":{"default":{"url":"https://i.ytimg.com/vi/VVi7B1VYfrg/default.jpg"}},"title":"Apple AirTags - HERE YOU GO! Official FIRST LOOK! Real footage! EXCLUSIVE LEAKS!"}},
+        {"id":{"kind":"youtube#video","videoId":"uz2hH9M07K4"},"snippet":{"thumbnails":{"default":{"url":"https://i.ytimg.com/vi/uz2hH9M07K4/default.jpg"}},"title":"Why You Spend So Much Money At Apple"}}
+    ]
+}
+
