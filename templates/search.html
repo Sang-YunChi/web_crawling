@@ -8,7 +8,7 @@
         section {
             display: grid;
             gap: 20px;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(7, 1fr);
         }
     </style>
 </head>
@@ -17,13 +17,21 @@
     <h3>Found {{results_number}} results for <span style="color: red">{{searchingBy}}</span></h3>
     <a href="/">To Main</a>
     <section>
-        <h4>Thumbnail</h4>
-        <h4>Title(Link)</h4>
-        <h4>Latitude / Longitude</h4>
+        <h4>썸네일</h4>
+        <h4>제목(링크)</h4>
+        <h4>위도 / 경도</h4>
+        <h4>조회수</h4>
+        <h4>좋아요</h4>
+        <h4>싫어요</h4>
+        <h4>댓글수</h4>
         {% for v in videos %}
             <img src="http://i.ytimg.com/vi/{{ids[loop.index-1]}}/mqdefault.jpg" alt="">
             <a href="https://youtube.com/watch?v={{ids[loop.index-1]}}">{{v.title}}</a>
             <span>{{v.latitude}} / {{v.longitude}}</span>
+            <span>{{v.view_count}}</span>
+            <span>{{v.like_count}}</span>
+            <span>{{v.dislike_count}}</span>
+            <span>{{v.comment_count}}</span>
 
         {% endfor %}
     </section>
