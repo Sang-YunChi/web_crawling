@@ -1,6 +1,7 @@
-from flask import Flask, render_template, request, redirect, send_file
-from save import save_to_file
-from geolocation_search import search_youtube
+from flask import Flask, render_template, request, redirect
+from searching import search_youtube
+
+# from save import save_to_file
 
 app = Flask("YouTubeCrawler")
 
@@ -27,6 +28,9 @@ def report():
     )
 
 
+app.run()
+
+
 # @app.route("/export")
 # def export():
 #     try:
@@ -39,6 +43,3 @@ def report():
 #         return send_file("YouTube.csv")
 #     except:
 #         return redirect("/")
-
-
-app.run()

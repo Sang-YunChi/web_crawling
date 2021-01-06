@@ -1,4 +1,3 @@
-# apiclient에서 googleapiclient로 이름 바꿔서 실행해줫음
 from apiclient import discovery
 from apiclient import errors
 import argparse
@@ -7,7 +6,8 @@ import argparse
 # tab of
 # https://cloud.google.com/console
 # Please ensure that you have enabled the YouTube Data API for your project.
-DEVELOPER_KEY = "AIzaSyDm756_WGLl1LnMD8MawzdzpsBZalcFasQ"
+# DEVELOPER_KEY = "AIzaSyDm756_WGLl1LnMD8MawzdzpsBZalcFasQ"
+DEVELOPER_KEY = "AIzaSyBmgcKRgFpOKGlpvLwIXK8JSZ-mE2lKx5I"
 YOUTUBE_API_SERVICE_NAME = "youtube"
 YOUTUBE_API_VERSION = "v3"
 
@@ -37,11 +37,12 @@ def extract_youtube(options):
     search_videos = []
     for search_result in search_response.get("items", []):
         search_videos.append(search_result["id"]["videoId"])
-
     video_ids = ",".join(search_videos)
 
     # Call the videos.list method to retrieve location details for each video.
-    video_response = youtube.videos().list(id=video_ids, part="snippet, recordingDetails").execute()
+    video_response = (
+        youtube.videos().list(id=video_ids, part="snippet, recordingDetails, statistics").execute()
+    )
 
     # Add each result to the list, and then display the list of matching videos.
     videos = []
@@ -50,6 +51,10 @@ def extract_youtube(options):
             "title": video_result["snippet"]["title"],
             "latitude": video_result["recordingDetails"]["location"]["latitude"],
             "longitude": video_result["recordingDetails"]["location"]["longitude"],
+            "view_count": video_result["statistics"]["viewCount"],
+            "like_count": video_result["statistics"]["likeCount"],
+            "dislike_count": video_result["statistics"]["dislikeCount"],
+            "comment_count": video_result["statistics"]["commentCount"],
         }
         videos.append(tmp)
     return search_videos, videos
@@ -61,8 +66,8 @@ def search_youtube(word):
     argparser = argparse.ArgumentParser(conflict_handler="resolve")
     argparser.add_argument("--q", help="Search term", default=word)
     argparser.add_argument("--location", help="Location", default="37.42307,-122.08427")
-    argparser.add_argument("--location-radius", help="Location radius", default="5km")
-    argparser.add_argument("--max-results", help="Max results", default=100)
+    argparser.add_argument("--location-radius", help="Location radius", default="1000km")
+    argparser.add_argument("--max-results", help="Max results", default=10)
     args = argparser.parse_args()
 
     try:
