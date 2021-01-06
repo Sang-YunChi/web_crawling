@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Result</title>
+    <style>
+        section {
+            display: grid;
+            gap: 20px;
+            grid-template-columns: repeat(3, 1fr);
+        }
+    </style>
+</head>
+<body>
+    <h1>Search Results</h1>
+    <h3>Found {{results_number}} results for <span style="color: red">{{searchingBy}}</span></h3>
+    <a href="/export?word={{searchingBy}}">Export to CSV</a>
+    <section>
+        <h4>Title</h4>
+        <h4>Latitude</h4>
+        <h4>Longitude</h4>
+        {% for v in videos %}
+            <span>{{v.title}}</span>
+            <span>{{v.latitude}}</span>
+            <span>{{v.longitude}}</span>
+        {% endfor %}
+    </section>
+</body>
+</html>

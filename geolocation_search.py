@@ -46,17 +46,15 @@ def extract_youtube(options):
 
     # Add each result to the list, and then display the list of matching videos.
     for video_result in video_response.get("items", []):
-        videos.append(
-            "%s, (%s,%s)"
-            % (
-                video_result["snippet"]["title"],
-                video_result["recordingDetails"]["location"]["latitude"],
-                video_result["recordingDetails"]["location"]["longitude"],
-            )
-        )
+        tmp = {
+            "title": video_result["snippet"]["title"],
+            "latitude": video_result["recordingDetails"]["location"]["latitude"],
+            "longitude": video_result["recordingDetails"]["location"]["longitude"],
+        }
+        videos.append(tmp)
     return videos
     # print("\n".join(videos))
-    ##print ("Videos:\n", "\n".join(videos), "\n")
+    # print ("Videos:\n", "\n".join(videos), "\n")
 
 
 def search_youtube(word):
@@ -67,6 +65,6 @@ def search_youtube(word):
     args = argparser.parse_args()
 
     try:
-        extract_youtube(args)
+        return extract_youtube(args)
     except errors.HttpError as e:
         print("An HTTP error %d occurred:\n%s" % (e.resp.status, e.content))
