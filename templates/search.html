@@ -8,26 +8,23 @@
         section {
             display: grid;
             gap: 20px;
-            grid-template-columns: repeat(5, 1fr);
+            grid-template-columns: repeat(3, 1fr);
         }
     </style>
 </head>
 <body>
     <h1>Search Results</h1>
     <h3>Found {{results_number}} results for <span style="color: red">{{searchingBy}}</span></h3>
-    <a href="/export?word={{searchingBy}}">Export to CSV</a>
+    <a href="/">To Main</a>
     <section>
         <h4>Thumbnail</h4>
-        <h4>Title</h4>
-        <h4>Latitude</h4>
-        <h4>Longitude</h4>
-        <h4>Link</h4>
+        <h4>Title(Link)</h4>
+        <h4>Latitude / Longitude</h4>
         {% for v in videos %}
-            <img src="http://i.ytimg.com/vi/{{ids[loop.index-1]}}/default.jpg" alt="">
-            <span>{{v.title}}</span>
-            <span>{{v.latitude}}</span>
-            <span>{{v.longitude}}</span>
-            <a href="https://youtube.com/watch?v={{ids[loop.index-1]}}">Link</a>
+            <img src="http://i.ytimg.com/vi/{{ids[loop.index-1]}}/mqdefault.jpg" alt="">
+            <a href="https://youtube.com/watch?v={{ids[loop.index-1]}}">{{v.title}}</a>
+            <span>{{v.latitude}} / {{v.longitude}}</span>
+
         {% endfor %}
     </section>
 </body>

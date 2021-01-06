@@ -1,8 +1,6 @@
 # apiclient에서 googleapiclient로 이름 바꿔서 실행해줫음
 from apiclient import discovery
 from apiclient import errors
-
-# from oauth2client.tools import argparser
 import argparse
 
 # Set DEVELOPER_KEY to the API key value from the APIs & auth > Registered apps
