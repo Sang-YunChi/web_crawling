@@ -8,7 +8,7 @@
         section {
             display: grid;
             gap: 20px;
-            grid-template-columns: repeat(7, 1fr);
+            grid-template-columns: repeat(8, 1fr);
         }
     </style>
 </head>
@@ -24,15 +24,16 @@
         <h4>좋아요</h4>
         <h4>싫어요</h4>
         <h4>댓글수</h4>
-        {% for v in videos %}
-            <img src="http://i.ytimg.com/vi/{{ids[loop.index-1]}}/mqdefault.jpg" alt="">
-            <a href="https://youtube.com/watch?v={{ids[loop.index-1]}}">{{v.title}}</a>
-            <span>{{v.latitude}} / {{v.longitude}}</span>
-            <span>{{v.view_count}}</span>
-            <span>{{v.like_count}}</span>
-            <span>{{v.dislike_count}}</span>
-            <span>{{v.comment_count}}</span>
-
+        <h4>업로드 날짜</h4>
+        {% for i in infos %}
+            <img src="http://i.ytimg.com/vi/{{i.id}}/mqdefault.jpg" alt="">
+            <a href="https://youtube.com/watch?v={{i.id}}">{{i.title}}</a>
+            <span>{{i.latitude}} / {{i.longitude}}</span>
+            <span>{{i.view_count}}</span>
+            <span>{{i.like_count}}</span>
+            <span>{{i.dislike_count}}</span>
+            <span>{{i.comment_count}}</span>
+            <span>{{i.date}}</span>
         {% endfor %}
     </section>
 </body>

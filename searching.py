@@ -14,7 +14,9 @@ YOUTUBE_API_VERSION = "v3"
 
 def extract_youtube(options):
     youtube = discovery.build(
-        YOUTUBE_API_SERVICE_NAME, YOUTUBE_API_VERSION, developerKey=DEVELOPER_KEY
+        YOUTUBE_API_SERVICE_NAME,
+        YOUTUBE_API_VERSION,
+        developerKey=DEVELOPER_KEY,
     )
 
     # Call the search.list method to retrieve results matching the specified
@@ -23,6 +25,7 @@ def extract_youtube(options):
         youtube.search()
         .list(
             q=options.q,
+            order="viewCount",
             type="video",
             location=options.location,
             locationRadius=options.location_radius,
@@ -55,17 +58,19 @@ def extract_youtube(options):
             "like_count": video_result["statistics"]["likeCount"],
             "dislike_count": video_result["statistics"]["dislikeCount"],
             "comment_count": video_result["statistics"]["commentCount"],
+            "id": video_result["id"],
+            "date": video_result["snippet"]["publishedAt"],
         }
         videos.append(tmp)
-    return search_videos, videos
+    return videos
     # print("\n".join(videos))
     # print ("Videos:\n", "\n".join(videos), "\n")
 
 
-def search_youtube(word):
+def search_youtube(word, lati, longi):
     argparser = argparse.ArgumentParser(conflict_handler="resolve")
     argparser.add_argument("--q", help="Search term", default=word)
-    argparser.add_argument("--location", help="Location", default="37.42307,-122.08427")
+    argparser.add_argument("--location", help="Location", default=f"{lati}, {longi}")
     argparser.add_argument("--location-radius", help="Location radius", default="1000km")
     argparser.add_argument("--max-results", help="Max results", default=10)
     args = argparser.parse_args()

@@ -1,3 +1,4 @@
+# -*- coding:utf-8 -*-
 from flask import Flask, render_template, request, redirect
 from searching import search_youtube
 
@@ -14,17 +15,18 @@ def index():
 @app.route("/search")
 def report():
     word = request.args.get("word")
+    lati = request.args.get("lati")
+    longi = request.args.get("longi")
     if word:
         word = word.lower()
-        ids, videos = search_youtube(word)
+        videos = search_youtube(word, lati, longi)
     else:
         return redirect("/")
     return render_template(
         "search.html",
         searchingBy=word,
         results_number=len(videos),
-        videos=videos,
-        ids=ids,
+        infos=videos,
     )
 
 
